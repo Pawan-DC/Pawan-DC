@@ -1,80 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pawan D•C - Personal Website</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body { font-family: Arial, sans-serif; }
-        .hero { background: linear-gradient(135deg, #007bff, #00d4ff); color: white; padding: 100px 0; text-align: center; }
-        .message-board { max-width: 600px; margin: auto; }
-        .message-box { border: 1px solid #ddd; padding: 10px; margin-top: 10px; border-radius: 5px; }
-        .services, .about, .contact { padding: 50px 0; text-align: center; }
-        .footer { background: #333; color: white; text-align: center; padding: 20px 0; margin-top: 20px; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pawan D•C | Personal Website</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome Icons for Social Media -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f7fb;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header, .footer {
+      background-color: #333; /* Dark Gray Footer */
+      color: #fff; /* White Footer Text */
+      padding: 20px 0;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #333; /* Dark Gray for Headings */
+    }
+
+    .section-content {
+      font-size: 1.1rem;
+      color: #555; /* Medium Gray for Body Text */
+      line-height: 1.6;
+    }
+
+    .contact-btn {
+      background-color: #007bff; /* Bootstrap Blue */
+      color: #ffffff;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-btn:hover {
+      background-color: #0056b3; /* Dark Blue on Hover */
+      color: white;
+    }
+
+    .social-icons a {
+      font-size: 1.5rem;
+      margin-right: 15px;
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .social-icons a:hover {
+      color: #007bff; /* Bootstrap Blue */
+    }
+
+    .about, .contact, .footer {
+      padding: 50px 0;
+    }
+
+    .contact-form input, .contact-form textarea {
+      margin-bottom: 15px;
+      padding: 12px;
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    .contact-form button {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      background-color: #218838;
+    }
+
+    .footer p {
+      font-size: 0.9rem;
+    }
+
+    .footer a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      color: #007bff; /* Bootstrap Blue */
+    }
+
+    .about ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .about li {
+      margin-bottom: 15px;
+      font-size: 1.2rem;
+      color: #6c757d;
+    }
+
+    .about li span {
+      font-weight: bold;
+      color: #343a40;
+    }
+
+    .about h4, .what-i-do h4 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #007bff; /* Bootstrap Blue */
+    }
+
+    /* Hero Section Background */
+    .hero {
+      background-color: #f0f0f0; /* Light Gray Background */
+      padding: 100px 0;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      color: #333; /* Dark Gray for Heading */
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      color: #555; /* Medium Gray for Body */
+    }
+  </style>
 </head>
+
 <body>
-    <header class="hero">
-        <h1>Pawan D•C</h1>
-        <p>Computer & AI Expert from Nepal</p>
-        <a href="#contact" class="btn btn-light btn-lg">Get in Touch</a>
-    </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Pawan D•C</h1>
+    <p>Computer & AI Expert from Nepal</p>
+  </section>
+
+  <!-- What I Do Section -->
+  <section class="what-i-do container text-center my-5">
+    <h2 class="section-title">What I Do</h2>
+    <p class="section-content">
+      I create websites, develop apps, work on AI projects, and build genius teams to complete high-tech projects.
+    </p>
     
-    <section class="container services my-5">
-        <h2>What I Do</h2>
-        <p>I create websites, develop apps, work on AI projects, and build genius teams to complete high-tech projects.</p>
-        <div class="row mt-4">
-            <div class="col-md-4"><h4>Website Development</h4><p>Building modern, responsive websites.</p></div>
-            <div class="col-md-4"><h4>AI Development</h4><p>Creating AI-based applications and solutions.</p></div>
-            <div class="col-md-4"><h4>App Development</h4><p>Developing mobile and web applications.</p></div>
-        </div>
-    </section>
-    
-    <section class="container about my-5">
-        <h2>About Me</h2>
-        <p>Passionate about AI, technology, and space. I aim to create innovative projects and build a team of geniuses to push boundaries in the field of computer science.</p>
-    </section>
-    
-    <section class="container message-board my-5">
-        <h2>Message Board</h2>
-        <p>Leave a message, and I'll get back to you!</p>
-        <input type="text" id="messageInput" class="form-control" placeholder="Write your message...">
-        <button onclick="addMessage()" class="btn btn-primary mt-2">Post Message</button>
-        <div id="messages"></div>
-    </section>
-    
-    <section id="contact" class="container contact my-5">
-        <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:pawand01c@gmail.com">pawand01c@gmail.com</a></p>
-    </section>
-    
-    <footer class="footer">
-        <p>&copy; 2025 Pawan D•C | All Rights Reserved</p>
-    </footer>
-    
-    <script>
-        function addMessage() {
-            let input = document.getElementById('messageInput');
-            let messageText = input.value;
-            if (messageText) {
-                let messageContainer = document.createElement('div');
-                messageContainer.className = 'message-box';
-                messageContainer.textContent = messageText;
-                document.getElementById('messages').appendChild(messageContainer);
-                localStorage.setItem('messages', document.getElementById('messages').innerHTML);
-                input.value = '';
-            }
-        }
-        
-        function loadMessages() {
-            let savedMessages = localStorage.getItem('messages');
-            if (savedMessages) {
-                document.getElementById('messages').innerHTML = savedMessages;
-            }
-        }
-        
-        window.onload = loadMessages;
-    </script>
+    <div class="row">
+      <div class="col-md-4">
+        <h4>Website Development</h4>
+        <p>Building modern, responsive websites.</p>
+      </div>
+      <div class="col-md-4">
+        <h4>AI Development</h4>
+        <p>Creating AI-based applications and solutions.</p>
+      </div>
+      <div class="col-md-4">
+        <h4>App Development</h4>
+        <p>Developing mobile and web applications.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section class="about container text-center my-5">
+    <h2 class="section-title">About Me</h2>
+    <p class="section-content">
+      Passionate about AI, technology, and space. I aim to create innovative projects and build a team of geniuses to push boundaries in the field of computer science.
+    </p>
+    <ul>
+      <li><span>Website Development:</span> Building responsive, user-friendly websites.</li>
+      <li><span>AI Projects:</span> Crafting intelligent systems and applications.</li>
+      <li><span>App Development:</span> Creating mobile apps for enhanced experiences.</li>
+      <li><span>Team Leadership:</span> Building strong teams for tackling high-tech projects.</li>
+    </ul>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact container text-center my-5">
+    <h2 class="section-title">Contact Me</h2>
+    <p class="section-content">Feel free to get in touch with me by sending an email or using the contact form below.</p>
+    <a href="mailto:pawand01c@gmail.com" class="contact-btn">Send an Email</a>
+
+    <div class="contact-form mt-4">
+      <h4>Or send a message directly</h4>
+      <form action="mailto:pawand01c@gmail.com" method="POST" enctype="multipart/form-data">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer text-center">
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/pawandc" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="https://twitter.com/pawandc" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+      <a href="https://github.com/pawandc" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+    </div>
+    <p>© 2025 Pawan D•C. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Bootstrap 5 JS and FontAwesome Icons -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
 </body>
+
 </html>
